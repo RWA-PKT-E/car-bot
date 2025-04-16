@@ -53,7 +53,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Please send only the last 4 digits of the car number.")
 
 # Replace with your bot token
-TOKEN = "7683161854:AAG0ix3Nm-ZwEgxAe9DQvoNZeXcyYn8yiG4"
+TOKEN = "7272894453:AAF190KGivxJQ-hbceI3X3loER79hzfRGgM"
 
 # Run the bot
 app = ApplicationBuilder().token(TOKEN).build()
