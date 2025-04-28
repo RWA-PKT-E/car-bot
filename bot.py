@@ -12,6 +12,7 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
+
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 if not TOKEN:
     sys.exit("❌ Error: TELEGRAM_TOKEN not set in environment. Exiting.")
