@@ -1,6 +1,10 @@
 import pandas as pd
+import os 
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
+
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+
 
 # Load Excel data
 data = pd.read_excel("data.xlsx")
@@ -53,7 +57,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Please send only the last 4 digits of the car number.")
 
 # Replace with your bot token
-TOKEN = "7272894453:AAF190KGivxJQ-hbceI3X3loER79hzfRGgM"
+
 
 # Run the bot
 app = ApplicationBuilder().token(TOKEN).build()
