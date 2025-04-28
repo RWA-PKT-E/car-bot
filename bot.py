@@ -1,9 +1,20 @@
-import pandas as pd
-import os 
-from telegram import Update, ReplyKeyboardMarkup
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
+import os
+import sys
+import time
+from collections import defaultdict
 
+import pandas as pd
+from telegram import Update, ReplyKeyboardMarkup
+from telegram.ext import (
+    ApplicationBuilder,
+    CommandHandler,
+    MessageHandler,
+    ContextTypes,
+    filters,
+)
 TOKEN = os.getenv("TELEGRAM_TOKEN")
+if not TOKEN:
+    sys.exit("❌ Error: TELEGRAM_TOKEN not set in environment. Exiting.")
 
 
 # Load Excel data
