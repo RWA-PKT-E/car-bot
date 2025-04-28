@@ -57,7 +57,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Please send only the last 4 digits of the car number.")
 
 # Replace with your bot token
-
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 # Run the bot
 app = ApplicationBuilder().token(TOKEN).build()
